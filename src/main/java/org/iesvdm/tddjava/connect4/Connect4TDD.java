@@ -9,17 +9,18 @@ import java.util.stream.Stream;
 
 public class Connect4TDD {
 
-    private static final int ROWS = 6;
 
-    private static final int COLUMNS = 7;
+    public static final int ROWS = 6;
+
+    public static final int COLUMNS = 7;
 
     private static final int DISCS_TO_WIN = 4;
 
     private static final String EMPTY = " ";
 
-    private static final String RED = "R";
+    public static final String RED = "R";
 
-    private static final String GREEN = "G";
+    public static final String GREEN = "G";
 
     private static final String DELIMITER = "|";
 

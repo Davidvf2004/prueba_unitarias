@@ -7,6 +7,7 @@ import org.testng.IObjectFactory2;
 
 import java.util.*;
 
+//SE TRAE TODOS LOS MÉTODOS Y ATRIBUTOS ESTÁTICOS DE LA CLASE Assertions
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -47,7 +48,7 @@ public class AssertTest {
 
     @Test
     void whenBooleanIsTrue() {
-        assertTrue(1 == 1);
+    assertTrue(1 == 1);
     }
 
     @Test

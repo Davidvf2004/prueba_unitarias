@@ -13,7 +13,6 @@ public class AssertJTest {
     void whenBooleanIsTrue() {
         assertThat(1 == 1).isTrue();
     }
-
     @Test
     void whenBooleanIsFalse() {
         boolean flag =false;

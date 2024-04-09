@@ -34,7 +34,12 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenTheGameStartsTheBoardIsEmpty() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        String expectedEmptyBoard ="";
+        assertEquals(expectedEmptyBoard, outputStream.toString());
     }
 
     /*
@@ -45,8 +50,16 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenDiscOutsideBoardThenRuntimeException() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
-
+        assertThrows(RuntimeException.class, () -> {
+            game.putDiscInColumn(-1);
+        });
+        assertThrows(RuntimeException.class, () -> {
+            game.putDiscInColumn(Connect4TDD.COLUMNS);
+        });
     }
 
     @Test
@@ -57,22 +70,41 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenSecondDiscInsertedInColumnThenPositionIsOne() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        game.putDiscInColumn(0);
+        int positionOfSecondDisc = game.putDiscInColumn(0);
 
+        assertEquals(1, positionOfSecondDisc);
     }
 
     @Test
     public void whenDiscInsertedThenNumberOfDiscsIncreases() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        int initialNumberOfDiscs = game.getNumberOfDiscs();
+        game.putDiscInColumn(0);
+        int numberOfDiscsAfterInsertion = game.getNumberOfDiscs();
 
-
+        assertEquals(initialNumberOfDiscs + 1, numberOfDiscsAfterInsertion);
     }
-
     @Test
     public void whenNoMoreRoomInColumnThenRuntimeException() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        for (int i = 0; i < Connect4TDD.ROWS; i++) {
+            game.putDiscInColumn(0);
+        }
 
-
+        assertThrows(RuntimeException.class, () -> {
+            game.putDiscInColumn(0);
+        });
     }
 
     /*
@@ -83,12 +115,27 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenFirstPlayerPlaysThenDiscColorIsRed() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        String currentPlayer = game.getCurrentPlayer();
+        game.putDiscInColumn(0);
+
+        assertEquals(Connect4TDD.RED, currentPlayer);
     }
 
     @Test
     public void whenSecondPlayerPlaysThenDiscColorIsGreen() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        game.putDiscInColumn(0);
+        String currentPlayer = game.getCurrentPlayer();
+        game.putDiscInColumn(1);
+
+        assertEquals(Connect4TDD.GREEN, currentPlayer);
     }
 
     /*
