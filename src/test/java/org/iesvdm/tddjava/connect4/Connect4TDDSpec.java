@@ -9,9 +9,10 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
+
+/*Clase del test de connect4*/
 
 public class Connect4TDDSpec {
 
@@ -52,7 +53,6 @@ public class Connect4TDDSpec {
     public void whenFirstDiscInsertedInColumnThenPositionIsZero() {
 
         assertThat(tested.putDiscInColumn(0)).isEqualTo(0);
-
     }
 
     @Test
