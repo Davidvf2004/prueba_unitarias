@@ -248,7 +248,20 @@ public class Connect4TDDSpec {
 
     @Test
     public void when4Diagonal1DiscsAreConnectedThenThatPlayerWins() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < i; j++) {
+                game.putDiscInColumn(j); // Insertar discos rojos en cada columna hasta la diagonal
+            }
+            game.putDiscInColumn(i); // Insertar un disco rojo en la columna actual para formar la diagonal
+        }
+
+
+        assertTrue(game.isFinished());
+        assertEquals(Connect4TDD.RED, game.getWinner());
     }
 
     @Test

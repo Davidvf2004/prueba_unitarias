@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="561063a2-7378-4c9d-bb45-d310103a949e" name="Changes" comment="Cambio en Connect4Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesvdm/tddjava/ship/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesvdm/tddjava/ship/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/connect4/Connect4TDDSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/connect4/Connect4TDDSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/DirectionSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/DirectionSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/LocationSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/LocationSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PlanetSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PlanetSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/PointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/ShipSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/ship/ShipSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/connect4/Connect4TDDSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/connect4/Connect4TDDSpec.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +55,7 @@
     "Application.Connect4.executor": "Run",
     "JUnit.AssertTest.shouldContainTwoElements.executor": "Run",
     "JUnit.Connect4TDDSpec.executor": "Run",
+    "JUnit.Connect4TDDSpec.when4Diagonal1DiscsAreConnectedThenThatPlayerWins.executor": "Debug",
     "JUnit.Connect4TDDSpec.when4HorizontalDiscsAreConnectedThenThatPlayerWins.executor": "Run",
     "JUnit.Connect4TDDSpec.when4VerticalDiscsAreConnectedThenThatPlayerWins.executor": "Run",
     "JUnit.Connect4TDDSpec.whenADiscIsIntroducedTheBoardIsPrinted.executor": "Run",
@@ -66,6 +74,59 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.DirectionSpec.givenNWhenLeftThenW.executor": "Run",
+    "TestNG.DirectionSpec.givenSWhenLeftThenE.executor": "Run",
+    "TestNG.DirectionSpec.givenSWhenRightThenW.executor": "Run",
+    "TestNG.DirectionSpec.givenWWhenRightThenN.executor": "Run",
+    "TestNG.DirectionSpec.whenGetFromShortNameBThenReturnNone.executor": "Run",
+    "TestNG.DirectionSpec.whenGetFromShortNameNThenReturnDirectionN.executor": "Run",
+    "TestNG.DirectionSpec.whenGetFromShortNameWThenReturnDirectionW.executor": "Run",
+    "TestNG.LocationSpec.givenDifferentDirectionWhenEqualsThenFalse.executor": "Run",
+    "TestNG.LocationSpec.givenDifferentObjectWhenEqualsThenFalse.executor": "Run",
+    "TestNG.LocationSpec.givenDifferentXWhenEqualsThenFalse.executor": "Run",
+    "TestNG.LocationSpec.givenDifferentYWhenEqualsThenFalse.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionEAndXEqualsMaxXWhenForwardThen1.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionEWhenBackwardThenXDecreases.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionEWhenForwardThenXIncreases.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionNAndYEquals1WhenForwardThenMaxY.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionNWhenBackwardThenYIncreases.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionNWhenForwardThenYDecreases.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionSAndYEqualsMaxYWhenForwardThen1.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionSWhenBackwardThenYDecreases.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionSWhenForwardThenYIncreases.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionWAndXEquals1WhenForwardThenMaxX.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionWWhenBackwardThenXIncreases.executor": "Run",
+    "TestNG.LocationSpec.givenDirectionWWhenForwardThenXDecreases.executor": "Run",
+    "TestNG.LocationSpec.givenObstacleWhenBackwardThenReturnFalse.executor": "Run",
+    "TestNG.LocationSpec.givenObstacleWhenForwardThenReturnFalse.executor": "Run",
+    "TestNG.LocationSpec.givenSameObjectsWhenEqualsThenTrue.executor": "Run",
+    "TestNG.LocationSpec.givenSameXYDirectionWhenEqualsThenTrue.executor": "Run",
+    "TestNG.LocationSpec.whenCopyThenDifferentObject.executor": "Run",
+    "TestNG.LocationSpec.whenCopyThenEquals.executor": "Run",
+    "TestNG.LocationSpec.whenInstantiatedThenDirectionIsStored.executor": "Run",
+    "TestNG.LocationSpec.whenInstantiatedThenXIsStored.executor": "Run",
+    "TestNG.LocationSpec.whenInstantiatedThenYIsStored.executor": "Run",
+    "TestNG.LocationSpec.whenTurnLeftThenDirectionIsSet.executor": "Run",
+    "TestNG.LocationSpec.whenTurnRightThenDirectionIsSet.executor": "Run",
+    "TestNG.PlanetSpec.whenInstantiatedThenMaxIsSet.executor": "Run",
+    "TestNG.PlanetSpec.whenInstantiatedThenObstaclesAreSet.executor": "Run",
+    "TestNG.PointSpec.whenInstantiatedThenYIsSet.executor": "Run",
+    "TestNG.ShipSpec.givenDirectionEAndXEquals1WhenReceiveCommandsBThenWrap.executor": "Run",
+    "TestNG.ShipSpec.givenDirectionEAndXEqualsMaxXWhenReceiveCommandsFThenWrap.executor": "Run",
+    "TestNG.ShipSpec.givenEastWhenMoveForwardThenXIncreases.executor": "Run",
+    "TestNG.ShipSpec.givenNorthWhenMoveForwardThenYDecreases.executor": "Run",
+    "TestNG.ShipSpec.whenInstantiatedThenLocationIsSet.executor": "Run",
+    "TestNG.ShipSpec.whenInstantiatedThenPlanetIsStored.executor": "Run",
+    "TestNG.ShipSpec.whenMoveBackwardThenBackward.executor": "Run",
+    "TestNG.ShipSpec.whenMoveForwardThenForward.executor": "Run",
+    "TestNG.ShipSpec.whenReceiveCommandsBThenBackward.executor": "Run",
+    "TestNG.ShipSpec.whenReceiveCommandsFThenForward.executor": "Run",
+    "TestNG.ShipSpec.whenReceiveCommandsLThenTurnLeft.executor": "Run",
+    "TestNG.ShipSpec.whenReceiveCommandsRThenTurnRight.executor": "Run",
+    "TestNG.ShipSpec.whenReceiveCommandsThenAllAreExecuted.executor": "Run",
+    "TestNG.ShipSpec.whenReceiveCommandsThenStopOnObstacle.executor": "Run",
+    "TestNG.ShipSpec.whenTurnLeftThenLeft.executor": "Run",
+    "TestNG.ShipSpec.whenTurnRightThenRight.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "test__connect4",
     "kotlin-language-version-configured": "true",
@@ -91,101 +152,111 @@
       <recent name="C:\Users\usuario\IdeaProjects\bucles\bd_persons\test_person" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Connect4TDDSpec.when4VerticalDiscsAreConnectedThenThatPlayerWins">
-    <configuration name="Connect4TDDSpec.when4HorizontalDiscsAreConnectedThenThatPlayerWins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ShipSpec.whenReceiveCommandsThenOForOkAndXForObstacle">
+    <configuration name="ShipSpec.givenDirectionEAndXEquals1WhenReceiveCommandsBThenWrap" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.connect4.*" />
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="when4HorizontalDiscsAreConnectedThenThatPlayerWins" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.ShipSpec" />
+      <option name="METHOD_NAME" value="givenDirectionEAndXEquals1WhenReceiveCommandsBThenWrap" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Connect4TDDSpec.when4VerticalDiscsAreConnectedThenThatPlayerWins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShipSpec.givenDirectionEAndXEqualsMaxXWhenReceiveCommandsFThenWrap" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.connect4.*" />
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="when4VerticalDiscsAreConnectedThenThatPlayerWins" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.ShipSpec" />
+      <option name="METHOD_NAME" value="givenDirectionEAndXEqualsMaxXWhenReceiveCommandsFThenWrap" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Connect4TDDSpec.whenADiscIsIntroducedTheBoardIsPrinted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShipSpec.whenReceiveCommandsThenAllAreExecuted" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.connect4.*" />
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="whenADiscIsIntroducedTheBoardIsPrinted" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.ShipSpec" />
+      <option name="METHOD_NAME" value="whenReceiveCommandsThenAllAreExecuted" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Connect4TDDSpec.whenNoDiscCanBeIntroducedTheGamesIsFinished" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.connect4.*" />
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="whenNoDiscCanBeIntroducedTheGamesIsFinished" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.ShipSpec" />
+      <option name="METHOD_NAME" value="whenReceiveCommandsThenOForOkAndXForObstacle" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Connect4TDDSpec.whenTheGameStartsItIsNotFinished" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShipSpec.whenReceiveCommandsThenStopOnObstacle" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.connect4.*" />
+          <option name="PATTERN" value="org.iesvdm.tddjava.ship.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="whenTheGameStartsItIsNotFinished" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.ship" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.ship.ShipSpec" />
+      <option name="METHOD_NAME" value="whenReceiveCommandsThenStopOnObstacle" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.Connect4TDDSpec.when4HorizontalDiscsAreConnectedThenThatPlayerWins" />
-      <item itemvalue="JUnit.Connect4TDDSpec.when4VerticalDiscsAreConnectedThenThatPlayerWins" />
-      <item itemvalue="JUnit.Connect4TDDSpec.whenADiscIsIntroducedTheBoardIsPrinted" />
-      <item itemvalue="JUnit.Connect4TDDSpec.whenNoDiscCanBeIntroducedTheGamesIsFinished" />
-      <item itemvalue="JUnit.Connect4TDDSpec.whenTheGameStartsItIsNotFinished" />
+      <item itemvalue="TestNG.ShipSpec.givenDirectionEAndXEquals1WhenReceiveCommandsBThenWrap" />
+      <item itemvalue="TestNG.ShipSpec.givenDirectionEAndXEqualsMaxXWhenReceiveCommandsFThenWrap" />
+      <item itemvalue="TestNG.ShipSpec.whenReceiveCommandsThenAllAreExecuted" />
+      <item itemvalue="TestNG.ShipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" />
+      <item itemvalue="TestNG.ShipSpec.whenReceiveCommandsThenStopOnObstacle" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Connect4TDDSpec.when4VerticalDiscsAreConnectedThenThatPlayerWins" />
-        <item itemvalue="JUnit.Connect4TDDSpec.when4HorizontalDiscsAreConnectedThenThatPlayerWins" />
-        <item itemvalue="JUnit.Connect4TDDSpec.whenNoDiscCanBeIntroducedTheGamesIsFinished" />
-        <item itemvalue="JUnit.Connect4TDDSpec.whenTheGameStartsItIsNotFinished" />
-        <item itemvalue="JUnit.Connect4TDDSpec.whenADiscIsIntroducedTheBoardIsPrinted" />
+        <item itemvalue="TestNG.ShipSpec.whenReceiveCommandsThenOForOkAndXForObstacle" />
+        <item itemvalue="TestNG.ShipSpec.whenReceiveCommandsThenStopOnObstacle" />
+        <item itemvalue="TestNG.ShipSpec.givenDirectionEAndXEquals1WhenReceiveCommandsBThenWrap" />
+        <item itemvalue="TestNG.ShipSpec.givenDirectionEAndXEqualsMaxXWhenReceiveCommandsFThenWrap" />
+        <item itemvalue="TestNG.ShipSpec.whenReceiveCommandsThenAllAreExecuted" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +291,8 @@
       <workItem from="1712058750967" duration="1830000" />
       <workItem from="1712216357013" duration="17000" />
       <workItem from="1712663642713" duration="2379000" />
-      <workItem from="1712736953353" duration="3022000" />
+      <workItem from="1712736953353" duration="4202000" />
+      <workItem from="1712742757442" duration="3835000" />
     </task>
     <task id="LOCAL-00001" summary="COMMIT INICIAL">
       <created>1680163647182</created>
@@ -252,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712666012334</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cambio en Connect4Test">
+      <option name="closed" value="true" />
+      <created>1712740209328</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712740209328</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

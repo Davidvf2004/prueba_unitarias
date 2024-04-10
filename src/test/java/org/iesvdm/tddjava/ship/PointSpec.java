@@ -16,11 +16,21 @@ public class PointSpec {
     }
 
     public void whenInstantiatedThenXIsSet() {
+        int x = 5;
+        int y = 10;
 
+        Point point = new Point(x, y);
+
+        assertEquals(x, point.getX());
     }
 
     public void whenInstantiatedThenYIsSet() {
+        int x = 5;
+        int y = 10;
 
+        Point point = new Point(x, y);
+
+        assertEquals(y, point.getY());
     }
 
 }
