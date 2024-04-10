@@ -145,14 +145,32 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenAskedForCurrentPlayerTheOutputNotice() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        String currentPlayer = game.getCurrentPlayer();
 
-
+        String output = outputStream.toString();
+        assertTrue(output.contains("Player"));
     }
 
     @Test
     public void whenADiscIsIntroducedTheBoardIsPrinted() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        game.putDiscInColumn(0);
+
+        String expectedBoard =
+                "| | | | | | | |\n" +
+                "| | | | | | | |\n" +
+                "| | | | | | | |\n" +
+                "| | | | | | | |\n" +
+                "| | | | | | | |\n" +
+                "|R| | | | | | |\n";
+        assertEquals(expectedBoard, outputStream.toString());
     }
 
     /*
@@ -161,23 +179,47 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenTheGameStartsItIsNotFinished() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        assertFalse(game.isFinished());
     }
 
     @Test
     public void whenNoDiscCanBeIntroducedTheGamesIsFinished() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        for (int col = 0; col < Connect4TDD.COLUMNS; col++) {
+            for (int row = 0; row < Connect4TDD.ROWS; row++) {
+                game.putDiscInColumn(col);
+            }
+        }
+
+        assertTrue(game.isFinished());
     }
 
     /*
      * If a player inserts a disc and connects more than 3 discs of his colour
      * in a straight vertical line then that player wins
      */
+        @Test
+        public void when4VerticalDiscsAreConnectedThenThatPlayerWins() {
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            PrintStream printStream = new PrintStream(outputStream);
+            Connect4TDD game = new Connect4TDD(printStream);
 
-    @Test
-    public void when4VerticalDiscsAreConnectedThenThatPlayerWins() {
+            for (int i = 0; i < 3; i++) {
+                game.putDiscInColumn(0);
+                game.putDiscInColumn(1);
+            }
+            game.putDiscInColumn(0);
 
-    }
+            assertTrue(game.isFinished());
+            assertEquals(Connect4TDD.RED, game.getWinner());
+        }
 
     /*
      * If a player inserts a disc and connects more than 3 discs of his colour
@@ -186,7 +228,17 @@ public class Connect4TDDSpec {
 
     @Test
     public void when4HorizontalDiscsAreConnectedThenThatPlayerWins() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        game.putDiscInColumn(0);
+        game.putDiscInColumn(1);
+        game.putDiscInColumn(2);
+        game.putDiscInColumn(3);
+
+        assertFalse(game.isFinished());
+        assertEquals(Connect4TDD.RED, game.getWinner());
     }
 
     /*
