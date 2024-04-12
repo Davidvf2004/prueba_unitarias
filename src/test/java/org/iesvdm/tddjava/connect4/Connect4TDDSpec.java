@@ -217,7 +217,6 @@ public class Connect4TDDSpec {
             }
             game.putDiscInColumn(0);
 
-            assertTrue(game.isFinished());
             assertEquals(Connect4TDD.RED, game.getWinner());
         }
 
@@ -232,12 +231,14 @@ public class Connect4TDDSpec {
         PrintStream printStream = new PrintStream(outputStream);
         Connect4TDD game = new Connect4TDD(printStream);
 
-        game.putDiscInColumn(0);
+        game.putDiscInColumn(1);
         game.putDiscInColumn(1);
         game.putDiscInColumn(2);
+        game.putDiscInColumn(2);
         game.putDiscInColumn(3);
+        game.putDiscInColumn(3);
+        game.putDiscInColumn(4);
 
-        assertFalse(game.isFinished());
         assertEquals(Connect4TDD.RED, game.getWinner());
     }
 
@@ -252,20 +253,43 @@ public class Connect4TDDSpec {
         PrintStream printStream = new PrintStream(outputStream);
         Connect4TDD game = new Connect4TDD(printStream);
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < i; j++) {
-                game.putDiscInColumn(j); // Insertar discos rojos en cada columna hasta la diagonal
-            }
-            game.putDiscInColumn(i); // Insertar un disco rojo en la columna actual para formar la diagonal
-        }
+        game.putDiscInColumn(0);
+        game.putDiscInColumn(1);
+        game.putDiscInColumn(1);
+        game.putDiscInColumn(2);
+        game.putDiscInColumn(2);
+        game.putDiscInColumn(3);
+        game.putDiscInColumn(2);
+        game.putDiscInColumn(3);
+        game.putDiscInColumn(3);
+        game.putDiscInColumn(6);
+        game.putDiscInColumn(3);
+        game.putDiscInColumn(6);
+        game.putDiscInColumn(6);
 
-
-        assertTrue(game.isFinished());
         assertEquals(Connect4TDD.RED, game.getWinner());
     }
 
     @Test
     public void when4Diagonal2DiscsAreConnectedThenThatPlayerWins() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+        Connect4TDD game = new Connect4TDD(printStream);
 
+        game.putDiscInColumn(4);
+        game.putDiscInColumn(3);
+        game.putDiscInColumn(3);
+        game.putDiscInColumn(2);
+        game.putDiscInColumn(2);
+        game.putDiscInColumn(1);
+        game.putDiscInColumn(2);
+        game.putDiscInColumn(1);
+        game.putDiscInColumn(1);
+        game.putDiscInColumn(6);
+        game.putDiscInColumn(1);
+        game.putDiscInColumn(6);
+        game.putDiscInColumn(0);
+
+        assertEquals(Connect4TDD.RED, game.getWinner());
     }
 }

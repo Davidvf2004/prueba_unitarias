@@ -14,7 +14,7 @@ public class Connect4TDD {
 
     public static final int COLUMNS = 7;
 
-    private static final int DISCS_TO_WIN = 4;
+    public static final int DISCS_TO_WIN = 4;
 
     private static final String EMPTY = " ";
 
@@ -28,7 +28,7 @@ public class Connect4TDD {
 
     private String currentPlayer = RED;
 
-    private String winner = "";
+    public String winner = "";
 
     private PrintStream outputChannel;
 
